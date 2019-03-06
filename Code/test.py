@@ -38,5 +38,17 @@ def test7():
     print(np.array([1, 2, 3])*2)  # --->[2 4 6]
 
 
+def test8():
+    a = np.array([[1, 2, 3], [4, 5, 6]])
+    print(a+np.array([1, 2, 3]))
+
+
+def test9():
+    a = np.array([np.zeros((4, 5)), np.ones((4, 5))])
+    b = [sum(c) for c in a]  # 能直接用sum进行广播运算
+    b = [c for x in a for c in x]  # 嵌套的循环在后面
+    print(b)
+
+
 if __name__ == "__main__":
-    test7()
+    test9()
