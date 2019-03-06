@@ -25,11 +25,11 @@ def data():
     tr_data, v_data, te_data = load_data()
     tr_inputs = [np.reshape(x, (784, 1)) for x in tr_data[0]]
     tr_results = [vectorize_result(y) for y in tr_data[1]]
-    training_data = zip(tr_inputs, tr_results)
+    training_data = list(zip(tr_inputs, tr_results))
     v_inputs = [np.reshape(x, (784, 1)) for x in v_data[0]]
     validation_data = zip(v_inputs, v_data[1])
     te_inputs = [np.reshape(x, (784, 1)) for x in te_data[0]]
-    test_data = zip(te_inputs, te_data[1])
+    test_data = list(zip(te_inputs, te_data[1]))
     return training_data, validation_data, test_data
 
 
