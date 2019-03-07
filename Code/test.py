@@ -50,5 +50,10 @@ def test9():
     print(b)
 
 
+def test10():
+    a = np.array([1, 2, 3])
+    print(1.0/a)  # 除法也同样是采用广播的方式
+
+
 if __name__ == "__main__":
-    test9()
+    test10()
