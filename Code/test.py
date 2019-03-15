@@ -1,5 +1,5 @@
-import numpy as np
 import os
+cimport numpy as np
 
 
 def test1():
@@ -55,5 +55,11 @@ def test10():
     print(1.0/a)  # 除法也同样是采用广播的方式
 
 
+def test11():
+    a = np.array([1, 2, 3])  # 两个列表对象时不可以相乘的，但是两个numpy对象是可以相乘的
+    b = [4, 5, 6]
+    print(a*b)
+
+
 if __name__ == "__main__":
-    test10()
+    test11()

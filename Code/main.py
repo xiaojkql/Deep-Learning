@@ -15,10 +15,10 @@ def main():
     # 载入数据
     training_data, validation_data, test_data = data_loader.data()
     network_one = network.Network([784, 50, 10])
-    network_two = network2.Network([784, 50, 10])
+    network_two = network2.Network([784, 100, 50, 10])
     # trainging_data, epochs, minibatch_size, eta, test_data
     # network_one.SGD(training_data, 10, 15, 1, test_data=test_data)
-    network_two.SGD(training_data, 10, 15, 1, 5,
+    network_two.SGD(training_data, 30, 15, 0.25, 5,
                     evaluation_data=test_data,
                     monitor_evaluation_accuracy=True)
 
